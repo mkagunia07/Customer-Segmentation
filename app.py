@@ -10,7 +10,7 @@ income_spend = pickle.load(open("income-spend_seg.pkl","rb"))
 #User-defined functions
 @app.route("/", methods=["GET"])
 def Home():
-    return render_template("Segmentation.html")
+    return render_template("Templates/Segmentation.html")
 
 @app.route("/prediction", methods=["POST"])
 def prediction():
@@ -42,7 +42,7 @@ def prediction():
     elif age_spend_prediction==3:
         age_spend_prediction  = "Target - Young"
 
-    return render_template("Segmentation.html", prediction1_output=income_spend_prediction, prediction2_output = age_spend_prediction)
+    return render_template("Templates/Segmentation.html", prediction1_output=income_spend_prediction, prediction2_output = age_spend_prediction)
 
 
 #Main function
