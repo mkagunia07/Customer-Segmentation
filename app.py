@@ -23,24 +23,24 @@ def prediction():
 
     
     if income_spend_prediction == 0:
-        income_spend_prediction = "Priority Customer"
+        income_spend_prediction = "Top Priority Customer - High Income High Spender"
     elif income_spend_prediction==1:
-        income_spend_prediction = "Target - High Income"
+        income_spend_prediction = "Target - High Income but Spend Less"
     elif income_spend_prediction==2:
-        income_spend_prediction = "Target - Low Income"
+        income_spend_prediction = "Target - Low Income but Spend More"
     elif income_spend_prediction==3:
         income_spend_prediction = "Common Customer"
     elif income_spend_prediction==4:
-        income_spend_prediction = "Low Priority Customer"
+        income_spend_prediction = "Low Priority Customer - Low Income Low Spend"
 
     if age_spend_prediction==0:
-        age_spend_prediction  = "Target - Old"
+        age_spend_prediction  = "Target - Old and can spend more"
     elif age_spend_prediction==1:
-        age_spend_prediction  = "Low Priority Customer"
+        age_spend_prediction  = "Low Priority Customer - Low Spender"
     elif age_spend_prediction==2:
-        age_spend_prediction  = "Priority Customer"
+        age_spend_prediction  = "Top Priority Customer - Spends More"
     elif age_spend_prediction==3:
-        age_spend_prediction  = "Target - Young"
+        age_spend_prediction  = "Target - Young and can spend more"
 
     return render_template("Segmentation.html", prediction1_output=income_spend_prediction, prediction2_output = age_spend_prediction)
 
